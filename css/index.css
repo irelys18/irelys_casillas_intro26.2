@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+    
+    :root {
+    --light-green: rgb(231, 239, 199);
+    --green: rgb(174, 200, 164);
+    --light-brown: rgb(138, 120, 78);
+    --brown: rgb(59, 59, 26);
+    --cream: rgb(255, 248, 220);
+    --orange: rgb(98, 43, 20);
+}
+    
+    body {
+       background: var(--light-green);
+       color: var(--brown);
+       font-family: 'Segoe UI';
+       padding: 0px;
+    }
+
+    /* Section Nav */
+    nav {
+        padding: 10px, 0px;
+        background: var(--light-green);
+        color: var(--brown);
+
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+    nav a{
+        text-decoration: none;
+    }
+
+    /* Section Header */
+
+    header {
+        background: var(--orange);
+        padding-top:70px;
+        padding-bottom:70px;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .headerLine{
+        height: 2px;
+        width: 60px;
+        background: var(--light-green);
+        margin-top: 0px;
+    }
+
+    h1 {
+        font-size: 60px;
+        color: var(--cream);
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        color: var(--brown);
+        font-size: 30px;
+        border-bottom: 1 px solid var(--brown);
+    }
+
+    section{
+        background: var(--green);
+        color: var(--brown);
+    }
+
+    /* Section About*/
+
+    #about {
+        background: rgba(222, 231, 167, 0.941);
+    }
+
+    #about {
+        padding: 20px 5px 30px 40px;
+        border: 5px solid var(--light-brown);
+        margin: 80px 100px;
+        margin-bottom: 50px;
+   }
+
+    .aboutTitle {
+    font-size: 30px;
+   }
+
+   /* Section Experience*/
+
+   #experience ul{
+    list-style: none;
+   }
+
+   #experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 5px 30px 40px;
+    margin: 80px 100px;
+    margin-bottom: 50px;  
+    margin-top: 0px;
+    border: 2px solid var(--brown);
+    }
+
+    /* Section Connect*/
+
+    #connect ul{
+        list-style: none;
+    }
+
+    #connect {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 5px 30px 40px;
+      margin: 80px 100px;
+      margin-bottom: 30px;  
+      margin-top: 0px;
+      border: 2px solid var(--brown);
+      background-color: rgb(228, 214, 169);
+    }
+
+    
+
+  
