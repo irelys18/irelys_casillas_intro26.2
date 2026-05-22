@@ -10,6 +10,7 @@
     --brown: rgb(59, 59, 26);
     --cream: rgb(255, 248, 220);
     --orange: rgb(98, 43, 20);
+    --light-orange: rgb(230, 117, 20);
 }
     
     body {
@@ -30,8 +31,14 @@
         gap: 20px;
         justify-content: center;
     }
-    nav a{
-        text-decoration: none;
+
+    nav a {
+    color: var(--brown);
+    text-decoration: none;
+    }
+
+    nav a:hover{
+        color: var(--light-orange);
     }
 
     /* Section Header */
@@ -85,32 +92,83 @@
         margin-bottom: 50px;
    }
 
+   #about ul {
+    list-style: none;
+   }
+
     .aboutTitle {
     font-size: 30px;
+    border-bottom: 1px solid var(--brown);
+    padding-top: 0px;
+    margin-top: 0px;
    }
 
    /* Section Experience*/
 
-   #experience ul{
-    list-style: none;
-   }
-
+   
    #experience {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    padding: 20px 5px 30px 40px;
+    padding: 20px 5px 20px 40px;
     margin: 80px 100px;
     margin-bottom: 50px;  
     margin-top: 0px;
     border: 2px solid var(--brown);
+    border-bottom: 1px solid var(--brown);
     }
+
+    #experience ul {
+     list-style: none;
+     border-top: 1px solid var(--brown);
+     padding-top: 15px;
+     margin-top: 10px;
+    }
+
+
+   #experience li {
+    list-style: none;
+    border: 2px solid var(--brown);
+    border-radius: 5px;
+    background: var(--cream);
+    padding: 15px 10px 10px 15px;
+    margin: 20px;
+   }
+
+   
+    /* Section Skills*/
+
+    #skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px 5px 30px 40px;
+        margin: 80px 100px;
+        margin-bottom: 50px;  
+        margin-top: 0px;
+        border: 2px solid var(--brown);
+    }
+
+    #skills ul {
+        list-style: none;
+        border-top: 1px solid var(--brown);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        margin-top: 0px;
+    }
+
+    /* Section Projects*/
+    
 
     /* Section Connect*/
 
     #connect ul{
         list-style: none;
+        border-top: 1px solid var(--brown);
     }
 
     #connect {
