@@ -23,6 +23,8 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 
+//Form
+
 let form = document.forms["leave_message"];
 
 form.addEventListener('submit', function(event){
@@ -42,7 +44,6 @@ form.addEventListener('submit', function(event){
         <span>${message}</span>
     `;
 
-
     let removeButton = document.createElement('button')
     removeButton.type = 'button';
     removeButton.textContent = 'Remove'
@@ -53,6 +54,47 @@ form.addEventListener('submit', function(event){
 
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
+
+    form.reset();
+    });
+
+
+    async function fetchRepos() { 
+        try {
+            const projectSection = document.getElementById("projects");
+            const projectList = projectSection.querySelector("ul");
+
+            let response = await fetch ('https://api.github.com/users/irelys18/repos')
+
+            if(!response.ok){
+                throw new Error(response.status);
+            }
+
+            let data = await response.json()
+
+            console.log(data)
+
+            for (let i = 0; i < data.length; i++) {
+               let project = document.createElement('li')
+               project.innerHTML = `<a target='_blank' href='${data[i].html_url}'>${data[i].name}</a>`
+               projectList.appendChild(project)
+           }
+            
+        } catch (error){
+            console.error('An error occurred', error);
+
+            const errorMessage = document.createElement("p");
+            errorMessage,textContent = "Sorry, projects could not be loaded.";
+
+            projectSection.appendChild(errorMessage)
+        }
+    }
+
+    fetchRepos()
+
+
+    
+
 
     form.reset();
     });
