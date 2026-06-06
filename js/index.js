@@ -75,11 +75,11 @@ fetch('https://api.github.com/users/irelys18/repos')
 
         projectList.innerHTML = "";
 
-        repositories.forEach(repo => {
+        for (let i = 0; i < repositories.length; i++) {
             const project = document.createElement("li");
-            project.innerHTML = `<a target="_blank" href="${repo.html_url}">${repo.name}</a>`;
+            project.innerHTML = `<a target="_blank" href="${repositories[i].html_url}">${repositories[i].name}</a>`;
             projectList.appendChild(project);
-        });
+        }
     })
     .catch(error => {
         console.error("An error occurred", error);
@@ -90,11 +90,6 @@ fetch('https://api.github.com/users/irelys18/repos')
 
         projectSection.appendChild(errorMessage);
     });
+   
 
-
-    
-
-
-    form.reset();
-    });
 
