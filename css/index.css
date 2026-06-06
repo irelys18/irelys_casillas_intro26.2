@@ -41,6 +41,10 @@
         color: var(--sky-blue);
     }
 
+    nav a:hover {
+    color: var(--light-orange);
+}
+
     /* Section Header */
 
     header {
@@ -206,7 +210,33 @@
         border-color: var(--sky-blue);
     }
 
-    /* Section Connect*/
+    #experience li {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--cream);
+        border: 1px solid var(--brown);
+        padding: 15px;
+        margin-bottom: 15px;
+        margin-right: 40px;
+        border-radius: 8px;
+    }
+
+    /* Section Skills*/
+
+     #skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px 5px 30px 40px;
+        margin: 80px 100px;
+        margin-bottom: 50px;  
+        margin-top: 0px;
+        border: 2px solid var(--brown);
+    }
+     
+
+    /* Section Projects*/
 
     #connect ul{
         list-style: none;
@@ -214,7 +244,10 @@
         padding-top: 15px;
     }
 
-    #connect {
+
+    /* Section Connect*/
+
+     #connect {
       display: flex;
       flex-direction: column;
       justify-content: center;
