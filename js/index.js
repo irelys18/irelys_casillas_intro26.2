@@ -95,4 +95,6 @@ fetch('https://api.github.com/users/irelys18/repos')
     
 
 
+    form.reset();
+    });
 
