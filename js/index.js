@@ -61,6 +61,9 @@ form.addEventListener('submit', function(event){
 
     async function fetchRepos() { 
         try {
+            const projectSection = document.getElementById("projects");
+            const projectList = projectSection.querySelector("ul");
+
             let response = await fetch ('https://api.github.com/users/irelys18/repos')
 
             if(!response.ok){
@@ -71,16 +74,19 @@ form.addEventListener('submit', function(event){
 
             console.log(data)
 
-            let projectList = document.querySelector('#projects ul')
-
-           for (let i = 0; i < data.length; i++) {
+            for (let i = 0; i < data.length; i++) {
                let project = document.createElement('li')
                project.innerHTML = `<a target='_blank' href='${data[i].html_url}'>${data[i].name}</a>`
                projectList.appendChild(project)
            }
             
         } catch (error){
-            console.error('An error occurred', error)
+            console.error('An error occurred', error);
+
+            const errorMessage = document.createElement("p");
+            errorMessage,textContent = "Sorry, projects could not be loaded.";
+
+            projectSection.appendChild(errorMessage)
         }
     }
 
