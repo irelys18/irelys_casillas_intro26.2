@@ -23,9 +23,7 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 
-//Form
-
-let form = document.querySelector('form')
+let form = document.forms["leave_message"];
 
 form.addEventListener('submit', function(event){
     event.preventDefault()
@@ -34,23 +32,28 @@ form.addEventListener('submit', function(event){
     let email = event.target.usersEmail.value
     let message = event.target.usersMessage.value
 
-    let messageList = document.querySelector('#messages ul')
-    let newMessage = document.createElement('li')
-    newMessage.innerHTML = `<a href="mailto:${email}">${email}</a> <span>${message}</span> `
+    console.log(name, email, message);
 
-    messageList.appendChild(newMessage)
+    const messageSection = document.getElementById('messages')
+    const messageList = messageSection.querySelector('ul')
+    let newMessage = document.createElement('li');
+    newMessage.innerHTML = `
+        <a href="mailto:${email}">${name}</a>
+        <span>${message}</span>
+    `;
+
 
     let removeButton = document.createElement('button')
-    removeButton.innerHTML= 'Remove'
+    removeButton.type = 'button';
+    removeButton.textContent = 'Remove'
 
     removeButton.addEventListener('click', function(){
-        let entry = this.parentNode
-        entry.remove()
-    })
+        newMessage.remove();
+    });
 
-    newMessage.appendChild(removeButton)
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
 
-    form.reset()
+    form.reset();
+    });
 
-
-})
