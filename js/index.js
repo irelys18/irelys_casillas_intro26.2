@@ -44,8 +44,6 @@ form.addEventListener('submit', function(event){
         <span>${message}</span>
     `;
 
-    messageList.appendChild(removeButton)
-
     let removeButton = document.createElement('button')
     removeButton.type = 'button';
     removeButton.textContent = 'Remove'
@@ -59,6 +57,37 @@ form.addEventListener('submit', function(event){
 
     form.reset();
     });
+
+
+    async function fetchRepos() { 
+        try {
+            let response = await fetch ('https://api.github.com/users/irelys18/repos')
+
+            if(!response.ok){
+                throw new Error(response.status);
+            }
+
+            let data = await response.json()
+
+            console.log(data)
+
+            let projectList = document.querySelector('#projects ul')
+
+           for (let i = 0; i < data.length; i++) {
+               let project = document.createElement('li')
+               project.innerHTML = `<a target='_blank' href='${data[i].html_url}'>${data[i].name}</a>`
+               projectList.appendChild(project)
+           }
+            
+        } catch (error){
+            console.error('An error occurred', error)
+        }
+    }
+
+    fetchRepos()
+
+
+    
 
 
 
