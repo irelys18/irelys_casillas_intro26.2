@@ -6,9 +6,9 @@
     :root {
     --navy-blue: rgb(31, 58, 95);      /* dark navy (main color) */
     --steel-blue: rgb(46, 90, 136);    /* secondary blue */
-    --sky-blue: rgb(78, 161, 211);     /* accent/highlights */
+    --sky-blue: rgb(78, 161, 211);     /* accent */
     --light-gray: rgb(245, 247, 250);  /* background */
-    --white: rgb(255, 255, 255);       /* cards/sections */
+    --white: rgb(255, 255, 255);       /* sections */
     --dark-gray: rgb(28, 28, 28);      /* main text */
     --medium-gray: rgb(107, 114, 128); /* secondary text */
     --border-gray: rgb(209, 213, 219); /* borders */
@@ -41,9 +41,6 @@
         color: var(--sky-blue);
     }
 
-    nav a:hover {
-    color: var(--light-orange);
-}
 
     /* Section Header */
 
