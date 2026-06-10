@@ -109,8 +109,6 @@
                 image.style.display = "block";
                 image.src = wonderData[wonder].image;
 
-                document.querySelector("#resultSub").textContent = "";
-
                 document.querySelector("#map").style.display = "none";
 
                 document.querySelector("#result").style.display = "block";
