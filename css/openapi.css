@@ -4,11 +4,11 @@
 }
 
 :root{
-    --earth-brown: rgb(107, 79, 58);  /*Header, navigation bar, footer*/
-    --olive-green: rgb(122, 158, 126);  /*Buttons, highlights, hover effects*/
-    --gold: rgb(212, 163, 115);  /*Accents, borders, icons*/
-    --beige: rgb(250, 237, 205);  /*Page background*/
-    --dark: text rgb(58, 45, 31);  /*Main text*/
+    --earth-brown: rgb(107, 79, 58);  
+    --olive-green: rgb(122, 158, 126); 
+    --gold: rgb(212, 163, 115);  
+    --beige: rgb(250, 237, 205);  
+    --dark: rgb(58, 45, 31);  
     --dark-brown: rgb(65, 45, 21);
     --sand: rgb(237, 231, 216);
     --white: rgb(255, 255, 255);
@@ -105,6 +105,11 @@ button:last-child{
     border: 1px solid var(--gold);
     background: var(--sand);
     display: none;
+}
+
+#resultValue {
+    text-align: center;
+    font-weight: bold;
 }
 
 

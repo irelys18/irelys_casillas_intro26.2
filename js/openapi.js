@@ -59,6 +59,8 @@
 
                 try {
 
+                    document.querySelector("#resultValue").textContent = "Loading...";
+
                     const response = await fetch(
                         `https://restcountries.com/v3.1/name/${country}`
                     );
