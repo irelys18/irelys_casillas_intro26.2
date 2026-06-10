@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My API Project</title>
+    <link rel="stylesheet" href="css/openapi.css">
+</head>
+<body>
+    <nav>
+        <span>🧭 7 Natural Wonders Explorer</span>
+        <a href="index.html">🏠 Portfolio</a>
+    </nav>
+
+    <h1> Explore the Wonders 🍃</h1>
+
+    <form>
+        <div class="controls">
+            <select id="wonderSelect" name="wonderSelect">
+            <option value="">Select a Wonder</option>
+            <option value="Amazon Rainforest">Amazon Rainforest</option>
+            <option value="Ha Long Bay">Ha Long Bay</option>
+            <option value="Iguazu Falls">Iguazu Falls</option>
+            <option value="Jeju Island">Jeju Island</option>
+            <option value="Komodo National Park">Komodo National Park</option>
+            <option value="Puerto Princesa Subterranean River National Park">Puerto Princesa Subterranean River National Park</option>
+            <option value="Table Mountain">Table Mountain</option>
+        </select>
+        <div class="buttons">
+            <button type="button" id="country">📍Country</button>
+            <button type="button" id="description">🔍 Description</button>
+        </div>
+    </div>
+    </form>
+
+    <div id="result">
+        <h2 id="wonderName"></h2>
+        <p id="resultValue"></p>
+        <iframe id="map" width="100%" height="300" style="border:0; display: none; border:0"></iframe>
+        <img id="wonderImage">
+    </div>
+
+
+    <script src="js/openapi.js"></script>
+    
+</body>
+</html>

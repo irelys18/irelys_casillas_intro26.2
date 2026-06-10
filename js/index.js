@@ -59,43 +59,37 @@ form.addEventListener('submit', function(event){
     });
 
 
-    async function fetchRepos() { 
-        try {
-            const projectSection = document.getElementById("projects");
-            const projectList = projectSection.querySelector("ul");
 
-            let response = await fetch ('https://api.github.com/users/irelys18/repos')
+const projectSection = document.getElementById("projects");
+const projectList = projectSection.querySelector("ul");
 
-            if(!response.ok){
-                throw new Error(response.status);
-            }
-
-            let data = await response.json()
-
-            console.log(data)
-
-            for (let i = 0; i < data.length; i++) {
-               let project = document.createElement('li')
-               project.innerHTML = `<a target='_blank' href='${data[i].html_url}'>${data[i].name}</a>`
-               projectList.appendChild(project)
-           }
-            
-        } catch (error){
-            console.error('An error occurred', error);
-
-            const errorMessage = document.createElement("p");
-            errorMessage,textContent = "Sorry, projects could not be loaded.";
-
-            projectSection.appendChild(errorMessage)
+fetch('https://api.github.com/users/irelys18/repos')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(response.status);
         }
-    }
+        return response.json();
+    })
+    .then(repositories => {
+        console.log(repositories);
 
-    fetchRepos()
+        projectList.innerHTML = "";
 
+        for (let i = 0; i < repositories.length; i++) {
+            const project = document.createElement("li");
+            project.innerHTML = `<a target="_blank" href="${repositories[i].html_url}">${repositories[i].name}</a>`;
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => {
+        console.error("An error occurred", error);
 
-    
+        const errorMessage = document.createElement("p");
+        errorMessage.textContent = "Sorry, projects could not be loaded.";
+        errorMessage.style.color = "red";
 
-
-    form.reset();
+        projectSection.appendChild(errorMessage);
     });
+   
+
 
