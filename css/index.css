@@ -129,9 +129,12 @@
     }
 
     #experience li {
-        margin: 2px 5px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--white);
         padding: 12px 30px;
-        border-radius: 55px;
+        margin-bottom: 15px;
+        margin-right: 40px;
     }
 
    
@@ -207,16 +210,6 @@
         border-color: var(--sky-blue);
     }
 
-    #experience li {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--cream);
-        border: 1px solid var(--brown);
-        padding: 15px;
-        margin-bottom: 15px;
-        margin-right: 40px;
-        border-radius: 8px;
-    }
 
     /* Section Skills*/
 

@@ -30,6 +30,11 @@ nav {
     justify-content: space-between;
 }
 
+nav span {
+    color: var(--gold);
+    text-decoration: none;
+}
+
 nav a {
     color: var(--gold);
     text-decoration: none;
