@@ -110,6 +110,7 @@
                 const image = document.querySelector("#wonderImage");
                 image.style.display = "block";
                 image.src = wonderData[wonder].image;
+                image.alt = wonder;
 
                 document.querySelector("#map").style.display = "none";
 
