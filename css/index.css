@@ -78,7 +78,7 @@
     section{
         background: var(--white);
         color: var(--dark-gray);
-        border: var(--border-gray);
+        border: 1px solid var(--border-gray);
         margin: 80px 100px;
         padding: 20px 40px;
     }
@@ -149,7 +149,7 @@
         margin-top: 0px;
         border: 1px solid var(--border-gray);
     }
-
+   
     #skills ul {
         list-style: none;
         border-top: 3px solid var(--sky-blue);
@@ -210,21 +210,7 @@
         border-color: var(--sky-blue);
     }
 
-
-    /* Section Skills*/
-
-     #skills {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        padding: 20px 5px 30px 40px;
-        margin: 80px 100px;
-        margin-bottom: 50px;  
-        margin-top: 0px;
-        border: 2px solid var(--brown);
-    }
-     
+       
 
     /* Section Projects*/
 
@@ -386,6 +372,8 @@
         background: var(--steel-blue);
         color: var(--white);
     }
+
+    
 
 
 
